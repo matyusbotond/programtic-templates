@@ -61,6 +61,11 @@ namespace Generics
             pair.Item1 = new Developer("Gizi");
             pair.Item2 = "Józsi";
 
+            //ugyan az mint a Pair csak nem Settelhető az Item1, Item2
+            //hanem konstruktorba vájra az értékeket
+            Tuple<Developer, string> tuple = 
+            new Tuple<Developer, string>(new Developer("Gizi"), "Józsi");
+            
 
 
 

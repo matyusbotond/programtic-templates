@@ -13,10 +13,19 @@ namespace Generics
             Store store = new Store();
 
             store.Add("hello");
-            store.Add("world");
-
+            //store.Add("world");
+            
             string first = (string)store.Get(0);
             string second = (string)store.Get(1);
+
+            try
+            {
+                store.Get(2);
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                Console.WriteLine("Túlindexeltük a Store-t");
+            }
 
             Console.WriteLine("{0} {1}", first, second);
             Console.ReadKey();

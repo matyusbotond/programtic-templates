@@ -21,7 +21,7 @@ namespace Generics
             
             Store<Person> store2 = new Store<Person>();
             store2.Add(new Person("Géza"));
-
+            
             string first = store.Get(0);
             //2. probléma hogy nem tudjuk mire lehet castolni
             string second = store.Get(1); 

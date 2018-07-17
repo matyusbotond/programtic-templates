@@ -10,6 +10,16 @@ namespace Generics
     {
         static void Main(string[] args)
         {
+            Store store = new Store();
+
+            store.Add("hello");
+            store.Add("world");
+
+            string first = (string)store.Get(0);
+            string second = (string)store.Get(1);
+
+            Console.WriteLine("{0} {1}", first, second);
+            Console.ReadKey();
         }
     }
 }

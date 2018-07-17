@@ -13,7 +13,7 @@ namespace Generics
             Store<string> store = new Store<string>();
 
             store.Add("hello");
-            //store.Add("world");
+            store.Add("world");
 
             //1. probléma bármit enged Addolni
             //Megoldás: A Store<string> már nem engedi hozzá adni

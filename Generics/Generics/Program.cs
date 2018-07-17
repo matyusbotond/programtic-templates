@@ -55,6 +55,15 @@ namespace Generics
             //annak leszármazottját de a Person az őse
             //newStore.Add(new Person("asd"));
             newStore.Add(new Developer("A"));
+
+
+            Pair<Developer, string> pair = new Pair<Developer, string>();
+            pair.Item1 = new Developer("Gizi");
+            pair.Item2 = "Józsi";
+
+
+
+
             Console.ReadKey();
         }
 

@@ -8,5 +8,8 @@ namespace Generics
 {
     class Pair<T, K>
     {
+        public T Item1 { get; set; }
+
+        public K Item2 { get; set; }
     }
 }

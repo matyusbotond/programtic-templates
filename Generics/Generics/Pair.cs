@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace Generics
 {
-    class NewStore<T> where T : Person
+    class Pair<T, K>
     {
-        public void Add(T item)
-        {
-            //T temp = new T();
-        }
     }
 }

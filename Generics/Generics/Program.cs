@@ -28,17 +28,31 @@ namespace Generics
 
             Person p = store2.Get(0);
 
-            try
-            {
-                store.Get(2);
-            }
-            catch (ArgumentOutOfRangeException)
-            {
-                Console.WriteLine("Túlindexeltük a Store-t");
-            }
+            //try
+            //{
+            //    store.Get(2);
+            //}
+            //catch (ArgumentOutOfRangeException)
+            //{
+            //    Console.WriteLine("Túlindexeltük a Store-t");
+            //}
 
-            Console.WriteLine("{0} {1}", first, second);
+            //Console.WriteLine("{0} {1}", first, second);
+
+            Person p1 = new Person("Gazsi");
+            Person p2 = new Person("Jani");
+
+            //Swap<Person>(ref p1, ref p2);
+            Swap(ref p1, ref p2);
+            Console.WriteLine(p1.Name);
             Console.ReadKey();
+        }
+
+        static void Swap<TItem>(ref TItem lhs, ref TItem rhs)
+        {
+            TItem temp = lhs;
+            lhs = rhs;
+            rhs = temp;
         }
     }
 }

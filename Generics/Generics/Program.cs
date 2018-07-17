@@ -14,9 +14,13 @@ namespace Generics
 
             store.Add("hello");
             //store.Add("world");
+
+            //1. probléma bármit enged Addolni
+            store.Add(new Person("Géza")); 
             
             string first = (string)store.Get(0);
-            string second = (string)store.Get(1);
+            //2. probléma hogy nem tudjuk mire lehet castolni
+            string second = (string)store.Get(1); 
 
             try
             {

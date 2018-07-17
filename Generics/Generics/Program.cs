@@ -43,8 +43,18 @@ namespace Generics
             Person p2 = new Person("Jani");
 
             //Swap<Person>(ref p1, ref p2);
-            Swap(ref p1, ref p2);
-            Console.WriteLine(p1.Name);
+            //Swap(ref p1, ref p2);
+            //Console.WriteLine(p1.Name);
+
+            //Nem működik mert a string nem Person vagy annak 
+            //leszármazott típusa
+            //NewStore<string> newStore = new NewStore<string>();
+            //így már jó
+            NewStore<Developer> newStore = new NewStore<Developer>();
+            //ez se jó mert Developert fogad el vagy
+            //annak leszármazottját de a Person az őse
+            //newStore.Add(new Person("asd"));
+            newStore.Add(new Developer("A"));
             Console.ReadKey();
         }
 
